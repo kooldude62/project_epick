@@ -3,101 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Epick IDE</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Project Epick & Roblox Executor IDE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #e0e0e0;
+        }
+        header {
+            background: linear-gradient(to right, #ffd700, #ffaa00);
+            color: #1a1a1a;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .tool-section {
+            background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .tool-section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            border-color: #ffd700;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3),
+                           inset 0 0 10px rgba(255, 215, 0, 0.2);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(255, 215, 0, 0.5),
+                           inset 0 0 20px rgba(255, 215, 0, 0.3);
+            }
+        }
+        h1, h2 {
+            color: #ffd700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(to right, #ffd700, #ffaa00);
+            color: #1a1a1a;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background: linear-gradient(to right, #ffaa00, #ffd700);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+    </style>
 </head>
 <body>
-    <div class="min-h-screen bg-gradient-to-b from-black to-gray-950 text-gray-100">
-        <header class="border-b border-gray-900 bg-gradient-to-r from-black via-gray-950 to-black">
-            <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 typewriter">Project Epick</a>
-                <div class="flex gap-4">
-                    <a href="https://www.youtube.com/@projectepick" target="_blank" class="button youtube-button">
-                        <span class="button-glow"></span>
-                        <span class="relative z-10 flex items-center">
-                            <i data-lucide="youtube" class="mr-2 h-4 w-4"></i>
-                            YouTube
-                        </span>
-                    </a>
-                    <a href="https://example.com" target="_blank" class="button discord-button">
-                        <span class="button-glow"></span>
-                        <span class="relative z-10 flex items-center">
-                            <i data-lucide="disc" class="mr-2 h-4 w-4"></i>
-                            Discord
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <section class="py-32 text-center bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
-                <div class="container mx-auto px-4 relative z-10">
-                    <h1 class="text-6xl font-bold mb-6 font-mono bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 typewriter">Project Epick IDE</h1>
-                    <p class="text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
-                        Elevate your coding experience with our powerful and intuitive IDE.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <a href="https://www.youtube.com/@projectepick" target="_blank" class="button youtube-button">
-                            <span class="button-glow"></span>
-                            <span class="relative z-10 flex items-center justify-center w-full">
-                                <i data-lucide="youtube" class="mr-2 h-5 w-5"></i>
-                                Watch Tutorial
-                            </span>
-                        </a>
-                        <a href="https://example.com" target="_blank" class="button discord-button">
-                            <span class="button-glow"></span>
-                            <span class="relative z-10 flex items-center justify-center w-full">
-                                <i data-lucide="disc" class="mr-2 h-5 w-5"></i>
-                                Join Community
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="absolute inset-0 opacity-20">
-                    <div class="absolute inset-0 bg-radial-gradient"></div>
-                </div>
-            </section>
-
-            <section class="py-20 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
-                <div class="container mx-auto px-4 text-center relative z-10">
-                    <h2 class="text-4xl font-bold mb-6 font-mono bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 typewriter">Join Our Community</h2>
-                    <p class="text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
-                        Connect with other developers and stay updated with the latest features.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-6">
-                        <a href="https://www.youtube.com/@projectepick" target="_blank" class="button youtube-button">
-                            <span class="button-glow"></span>
-                            <span class="relative z-10 flex items-center justify-center w-full">
-                                <i data-lucide="youtube" class="mr-2 h-5 w-5"></i>
-                                Subscribe on YouTube
-                            </span>
-                        </a>
-                        <a href="https://example.com" target="_blank" class="button discord-button">
-                            <span class="button-glow"></span>
-                            <span class="relative z-10 flex items-center justify-center w-full">
-                                <i data-lucide="disc" class="mr-2 h-5 w-5"></i>
-                                Join Discord
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="absolute inset-0 opacity-20">
-                    <div class="absolute inset-0 bg-radial-gradient"></div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-gradient-to-t from-black to-gray-950 py-8">
-            <div class="container mx-auto px-4 text-center text-gray-400">
-                <p>&copy; 2025 Project Epick IDE. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
-    <script>
-        lucide.createIcons();
-    </script>
+    <header>
+        <h1>Roblox Development Tools</h1>
+    </header>
+    <main>
+        <section class="tool-section">
+            <h2>Project Epick</h2>
+            <p>Project Epick is a powerful tool for Roblox developers, offering advanced features to enhance your Exploiting experience.</p>
+            <a href="#" class="button">Learn More</a>
+        </section>
+        <section class="tool-section">
+            <h2>Roblox Executor</h2>
+            <p>Our Roblox Executor IDE provides a user-friendly interface for writing and testing Roblox scripts, making development faster and more efficient.</p>
+            <a href="#" class="button">Try It Now</a>
+        </section>
+    </main>
 </body>
 </html>
-
